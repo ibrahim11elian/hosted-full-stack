@@ -15,7 +15,7 @@
     "setenv": "eb setenv PORT=$PORT POSGRES_DB=$POSGRES_DB POSTGRES_HOST=$POSTGRES_HOST POSTGRES_PASSWORD=$POSTGRES_PASSWORD POSTGRES_USERNAME=$POSTGRES_USERNAME DB_PORT=$DB_PORT AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION AWS_PROFILE=$AWS_PROFILE AWS_BUCKET=$AWS_BUCKET JWT_SECRET=$JWT_SECRET",
     "deploy": "chmod +x bin/ebDeploy.sh && bin/ebDeploy.sh",
     "ebconfig": "chmod +x bin/ebConfig.sh && bin/ebConfig.sh",
-    "build": "npm install . && npm run clean && npm run tsc && npm run ebConfig && cp .npmrc www/.npmrc && cp package.json www/package.json && cp -R .elasticbeanstalk www/.elasticbeanstalk && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm install . && npm run clean && npm run tsc && npm run ebconfig && cp .npmrc www/.npmrc && cp package.json www/package.json && cp -R .elasticbeanstalk www/.elasticbeanstalk && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
